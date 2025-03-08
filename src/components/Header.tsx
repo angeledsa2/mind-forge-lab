@@ -30,13 +30,13 @@ const Header: React.FC = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4',
-        scrolled ? 'bg-background/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
           <ForgeLogo />
-          <span className="font-accent font-normal text-xl tracking-tight transition-colors group-hover:text-accent">
+          <span className="font-display font-medium text-xl tracking-tight transition-colors group-hover:text-accent lowercase">
             mind forge hq
           </span>
         </a>
@@ -54,14 +54,14 @@ const Header: React.FC = () => {
           onClick={toggleMobileMenu}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={24} strokeWidth={2} /> : <Menu size={24} strokeWidth={2} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div 
         className={cn(
-          'fixed inset-0 bg-background/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden',
+          'fixed inset-0 bg-background/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden',
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
       >
