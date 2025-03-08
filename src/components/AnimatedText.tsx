@@ -31,7 +31,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     <div 
       ref={textRef}
       className={cn(
-        'opacity-0 transform translate-y-4 transition-all duration-700 ease-out',
+        'opacity-0 transform translate-y-4 transition-all duration-500 ease-out',
         className
       )}
     >
