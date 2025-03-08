@@ -20,8 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Space Grotesk', 'sans-serif'],
+				sans: ['Poppins', 'sans-serif'],
+				display: ['Canela', 'serif'],
+				accent: ['Recoleta', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -110,10 +111,10 @@ export default {
 				},
 				'forge-glow': {
 					'0%, 100%': { 
-						filter: 'drop-shadow(0 0 10px rgba(255, 140, 0, 0.6))' 
+						filter: 'drop-shadow(0 0 10px rgba(153, 87, 26, 0.4))' 
 					},
 					'50%': { 
-						filter: 'drop-shadow(0 0 20px rgba(255, 140, 0, 0.8))' 
+						filter: 'drop-shadow(0 0 20px rgba(153, 87, 26, 0.6))' 
 					}
 				},
 				'particle-flow': {
@@ -140,6 +141,7 @@ export default {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 				'shimmer': 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%)',
+				'paper-texture': 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'4\' height=\'4\' viewBox=\'0 0 4 4\'%3E%3Cpath fill=\'%23a0aec0\' fill-opacity=\'0.05\' d=\'M1 3h1v1H1V3zm2-2h1v1H3V1z\'%3E%3C/path%3E%3C/svg%3E")',
 			},
 		}
 	},

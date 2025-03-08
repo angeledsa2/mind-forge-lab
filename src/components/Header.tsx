@@ -30,14 +30,14 @@ const Header: React.FC = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4',
-        scrolled ? 'bg-background/80 backdrop-blur-md shadow-md' : 'bg-transparent'
+        scrolled ? 'bg-background/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
           <ForgeLogo />
-          <span className="font-display font-semibold text-xl tracking-tight transition-colors group-hover:text-accent">
-            Mind Forge HQ
+          <span className="font-accent font-normal text-xl tracking-tight transition-colors group-hover:text-accent">
+            mind forge hq
           </span>
         </a>
 

@@ -31,8 +31,8 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 overflow-hidden">
       {/* Background gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full filter blur-[100px] animate-pulse-glow"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full filter blur-[100px] animate-pulse-glow animation-delay-1000"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full filter blur-[100px] animate-pulse-glow"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full filter blur-[100px] animate-pulse-glow animation-delay-1000"></div>
       
       {/* Brain icon with glow effect */}
       <div className="relative mb-12">
@@ -42,19 +42,19 @@ const Hero: React.FC = () => {
         >
           <Brain size={64} strokeWidth={1.5} />
         </div>
-        <div className="absolute inset-0 bg-accent/20 filter blur-xl rounded-full"></div>
+        <div className="absolute inset-0 bg-accent/10 filter blur-xl rounded-full"></div>
       </div>
       
       {/* Main heading */}
       <div className="text-center max-w-5xl relative z-10 space-y-4">
         <AnimatedText
-          text="Mind Forge HQ"
-          className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-gradient"
+          text="mind forge hq"
+          className="text-4xl md:text-6xl lg:text-7xl font-display font-medium tracking-tight text-gradient lowercase"
           delay={200}
         />
         <AnimatedText
           text="A Lab for Thought, Creativity & System Design"
-          className="text-xl md:text-2xl lg:text-3xl font-display text-muted-foreground mt-3"
+          className="text-xl md:text-2xl lg:text-3xl font-accent text-muted-foreground mt-3"
           delay={600}
         />
         
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
         <div className="mt-12 animate-fade-in opacity-0" style={{ animationDelay: '1.2s' }}>
           <a 
             href="#what-is-mindforge" 
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-accent to-amber-500 text-black font-medium rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,160,0,0.5)] hover:scale-105 group"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-accent to-primary text-white font-medium rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(153,87,26,0.3)] hover:scale-105 group"
           >
             Explore
             <ArrowRight 
