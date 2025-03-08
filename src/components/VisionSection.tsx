@@ -36,23 +36,23 @@ const VisionSection: React.FC = () => {
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-accent/30"></div>
       
       <div className="text-center mb-12">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary mb-4">
+        <div className="inline-flex items-center justify-center w-12 h-12 bg-secondary mb-4">
           <Lightbulb className="text-accent" size={24} />
         </div>
         <h2 className="text-2xl md:text-3xl font-display font-semibold mb-3 text-gradient">
-          What is Mind Forge?
+          What is Mind Forge
         </h2>
-        <p className="text-sm uppercase tracking-wider text-muted-foreground">A Vision, Not a Definition</p>
+        <p className="text-sm uppercase tracking-wider text-muted-foreground">A Vision and Definition</p>
       </div>
       
-      <div className="glass-panel rounded-2xl p-8 md:p-12 relative overflow-hidden backdrop-blur-lg">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-30"></div>
+      <div className="glass-panel p-8 md:p-12 relative overflow-hidden backdrop-blur-lg">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
         
         <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-balance max-w-3xl mx-auto">
           Mind Forge is where intelligence meets creativity, where structure and chaos collide, where deep thought turns into real-world systems. A hub for the seekers, the builders, and the ones who see beyond the surface.
         </p>
         
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-30"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
       </div>
     </section>
   );

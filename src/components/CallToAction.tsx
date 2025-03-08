@@ -48,12 +48,12 @@ const CTACard: React.FC<CTACardProps> = ({
     <div 
       ref={cardRef}
       className={cn(
-        "glass-card rounded-xl p-8 flex flex-col items-center text-center transition-all duration-700 ease-out opacity-0 translate-y-8",
-        "hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
+        "glass-card p-8 flex flex-col items-center text-center transition-all duration-700 ease-out opacity-0 translate-y-8",
+        "hover:border-accent/30 hover:shadow-md"
       )}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-secondary text-accent mb-6">
+      <div className="flex items-center justify-center w-12 h-12 bg-secondary text-accent mb-6">
         {icon}
       </div>
       
@@ -62,7 +62,7 @@ const CTACard: React.FC<CTACardProps> = ({
       
       <a 
         href={buttonLink} 
-        className="py-2 px-6 border border-accent/50 rounded-full text-accent hover:bg-accent/10 transition-colors"
+        className="py-2 px-6 border border-accent/50 text-accent hover:bg-accent/5 transition-colors"
       >
         {buttonText}
       </a>
@@ -98,23 +98,23 @@ const CallToAction: React.FC = () => {
   const ctaCards = [
     {
       icon: <Lightbulb size={24} />,
-      title: "Enter the Forge",
-      description: "Sign up for updates, insights, and first access to new ideas and concepts.",
-      buttonText: "Join Now",
+      title: "Get Updates",
+      description: "Sign up for insights and first access to new ideas and concepts.",
+      buttonText: "Subscribe",
       buttonLink: "#join"
     },
     {
       icon: <ClipboardPenLine size={24} />,
-      title: "Work with Mind Forge",
-      description: "Collaborate on projects or engage our consulting and strategic services.",
-      buttonText: "Get in Touch",
+      title: "Work With Us",
+      description: "Collaborate on projects or engage our consulting services.",
+      buttonText: "Contact",
       buttonLink: "#contact"
     },
     {
       icon: <Rocket size={24} />,
-      title: "Explore the Experiments",
-      description: "Discover projects, collaborations, and join the growing community.",
-      buttonText: "Discover",
+      title: "View Projects",
+      description: "Discover our work, collaborations, and join the community.",
+      buttonText: "Explore",
       buttonLink: "#experiments"
     }
   ];
@@ -127,9 +127,9 @@ const CallToAction: React.FC = () => {
     >
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-2xl md:text-3xl font-display font-semibold mb-3 text-gradient">
-          Choose Your Path
+          Connect With Mind Forge
         </h2>
-        <p className="text-muted-foreground">How would you like to engage with Mind Forge?</p>
+        <p className="text-muted-foreground">How to engage with our work</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">

@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4',
-        scrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-background/98 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -44,8 +44,8 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <NavLink href="#what-is-mindforge">About</NavLink>
-          <NavLink href="#ecosystem">Ecosystem</NavLink>
-          <NavLink href="#cta">Connect</NavLink>
+          <NavLink href="#ecosystem">Framework</NavLink>
+          <NavLink href="#cta">Contact</NavLink>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           onClick={toggleMobileMenu}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {mobileMenuOpen ? <X size={24} strokeWidth={2} /> : <Menu size={24} strokeWidth={2} />}
+          {mobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
         </button>
       </div>
 
@@ -67,8 +67,8 @@ const Header: React.FC = () => {
       >
         <nav className="flex flex-col items-center gap-8 text-2xl">
           <MobileNavLink href="#what-is-mindforge" onClick={toggleMobileMenu}>About</MobileNavLink>
-          <MobileNavLink href="#ecosystem" onClick={toggleMobileMenu}>Ecosystem</MobileNavLink>
-          <MobileNavLink href="#cta" onClick={toggleMobileMenu}>Connect</MobileNavLink>
+          <MobileNavLink href="#ecosystem" onClick={toggleMobileMenu}>Framework</MobileNavLink>
+          <MobileNavLink href="#cta" onClick={toggleMobileMenu}>Contact</MobileNavLink>
         </nav>
       </div>
     </header>

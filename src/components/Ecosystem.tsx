@@ -40,13 +40,13 @@ const EcosystemItem: React.FC<EcosystemItemProps> = ({ icon, title, description,
     <div 
       ref={itemRef}
       className={cn(
-        "glass-card rounded-xl p-6 transition-all duration-700 ease-out opacity-0 translate-y-16 transform hover:translate-y-[-4px] hover:shadow-lg hover:shadow-accent/5",
+        "glass-card p-6 transition-all duration-700 ease-out opacity-0 translate-y-16 transform hover:translate-y-[-4px] hover:shadow-md",
       )}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className="flex flex-col h-full">
         <div className="flex items-center gap-3 mb-4">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-secondary text-accent">
+          <div className="flex items-center justify-center w-10 h-10 bg-secondary text-accent">
             {icon}
           </div>
           <h3 className="text-xl font-display font-medium">{title}</h3>
@@ -125,9 +125,9 @@ const Ecosystem: React.FC = () => {
         className="text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ease-out opacity-0 translate-y-8"
       >
         <h2 className="text-2xl md:text-3xl font-display font-semibold mb-3 text-gradient">
-          The Ecosystem
+          The Framework
         </h2>
-        <p className="text-muted-foreground">How It All Connects</p>
+        <p className="text-muted-foreground">Core Components</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">

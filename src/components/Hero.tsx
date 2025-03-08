@@ -1,51 +1,25 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Brain, ArrowRight } from 'lucide-react';
 import AnimatedText from './AnimatedText';
 
 const Hero: React.FC = () => {
-  const brainRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!brainRef.current) return;
-      
-      const { clientX, clientY } = e;
-      const rect = brainRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      
-      const moveX = (clientX - centerX) * 0.01;
-      const moveY = (clientY - centerY) * 0.01;
-      
-      brainRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`;
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-  
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 overflow-hidden">
       {/* Geometric background patterns */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute top-1/4 left-1/4 w-48 h-48 border border-accent/30 transform rotate-45"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 border border-primary/30 transform -rotate-12"></div>
-        <div className="absolute top-1/3 right-1/3 w-32 h-32 border-2 border-foreground/20"></div>
+      <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-accent/50 transform rotate-45"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 border-2 border-foreground/20 transform -rotate-12"></div>
+        <div className="absolute top-1/3 right-1/3 w-40 h-40 border border-foreground/30"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-foreground/5 transform rotate-15"></div>
       </div>
       
-      {/* Brain icon with sharper design */}
+      {/* Icon with sharper design */}
       <div className="relative mb-12">
-        <div 
-          ref={brainRef}
-          className="relative z-10 text-accent"
-        >
+        <div className="relative z-10 text-accent">
           <Brain size={64} strokeWidth={1.5} />
         </div>
-        <div className="absolute inset-0 bg-accent/10 filter blur-sm"></div>
+        <div className="absolute inset-0 bg-accent/5 filter blur-sm"></div>
       </div>
       
       {/* Main heading with stronger typography */}
@@ -57,15 +31,15 @@ const Hero: React.FC = () => {
         />
         <AnimatedText
           text="A Lab for Thought, Creativity & System Design"
-          className="text-xl md:text-2xl lg:text-3xl font-accent font-medium text-muted-foreground mt-3"
+          className="text-xl md:text-2xl lg:text-3xl font-sans font-medium text-muted-foreground mt-3"
           delay={600}
         />
         
         {/* Geometric divider */}
         <div className="flex items-center justify-center my-8">
-          <div className="h-px w-16 bg-accent"></div>
-          <div className="w-2 h-2 bg-accent mx-3 transform rotate-45"></div>
-          <div className="h-px w-16 bg-accent"></div>
+          <div className="h-px w-16 bg-accent/50"></div>
+          <div className="w-2 h-2 bg-accent/50 mx-3 transform rotate-45"></div>
+          <div className="h-px w-16 bg-accent/50"></div>
         </div>
         
         {/* Tagline with stronger presence */}
@@ -79,9 +53,9 @@ const Hero: React.FC = () => {
         <div className="mt-12 animate-fade-in opacity-0" style={{ animationDelay: '1.2s' }}>
           <a 
             href="#what-is-mindforge" 
-            className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white font-medium rounded-sm transition-all duration-300 hover:bg-accent/90 hover:translate-y-[-2px] group"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white font-medium transition-all duration-300 hover:bg-accent/90 group"
           >
-            Explore
+            Learn More
             <ArrowRight 
               size={18} 
               className="transition-transform duration-300 group-hover:translate-x-1"
