@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -6,7 +5,7 @@ import VisionSection from '@/components/VisionSection';
 import Ecosystem from '@/components/Ecosystem';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
-import Particles from '@/components/Particles';
+import GridBackground from '@/components/GridBackground';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -31,7 +30,7 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Header />
-      <Particles />
+      <GridBackground />
       
       <main>
         <Hero />
