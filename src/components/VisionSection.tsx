@@ -119,3 +119,6 @@ const VisionSection: React.FC = () => {
       </div>
     </section>
   );
+};
+
+export default VisionSection;
